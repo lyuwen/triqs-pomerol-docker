@@ -13,7 +13,7 @@ docker run [--name <contailer name>] [-v <host dir>:<container dir>] -p 8888:888
 
 * Command line
 ```
-docker run [--name <contailer name>] [-v <host dir>:<container dir>] -ti docker/triqs_pomerol bash
+docker run [--name <contailer name>] [-v <host dir>:<container dir>] -ti fulvwen/triqs_pomerol bash
 ```
 
 ``pomerol2triqs.patch`` is needed for TRIQS v2.2.x.
