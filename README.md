@@ -8,12 +8,12 @@ It can be used to run a Jupyter notebook environment yourself, or to run a shell
 
 * Jupyter notebook
 ```
-docker run [--name <contailer name>] [-v <host dir>:<container dir>] -p 8888:8888 fulvwen/triqs_pomerol
+docker run [--name <contailer name>] [-v <host dir>:<container dir>] -p 8888:8888 fulvwen/triqs-pomerol
 ```
 
 * Command line
 ```
-docker run [--name <contailer name>] [-v <host dir>:<container dir>] -ti fulvwen/triqs_pomerol bash
+docker run [--name <contailer name>] [-v <host dir>:<container dir>] -ti fulvwen/triqs-pomerol bash
 ```
 
 ``pomerol2triqs.patch`` is needed for TRIQS v2.2.x.
