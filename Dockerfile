@@ -24,8 +24,6 @@ RUN mkdir -p $POMEROL2TRIQS_INSTALL_PREFIX
 
 WORKDIR /tmp
 
-COPY pomerol2triqs.patch /tmp/pomerol2triqs.patch
-
 RUN git clone https://github.com/aeantipov/pomerol.git pomerol.src && \
     mkdir -p pomerol.build && cd pomerol.build && \
     cmake ../pomerol.src -DCMAKE_BUILD_TYPE=Release \
@@ -33,7 +31,6 @@ RUN git clone https://github.com/aeantipov/pomerol.git pomerol.src && \
     make && make install
 
 RUN git clone https://github.com/krivenko/pomerol2triqs.git pomerol2triqs.src && \
-    cd pomerol2triqs.src && patch -p1 < /tmp/pomerol2triqs.patch && cd .. &&\
     mkdir pomerol2triqs.build && cd pomerol2triqs.build && \
     cmake ../pomerol2triqs.src -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=$POMEROL2TRIQS_INSTALL_PREFIX \
     -DPOMEROL_PATH=$POMEROL_INSTALL_PREFIX && \
