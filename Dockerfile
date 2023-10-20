@@ -1,4 +1,4 @@
-FROM fulvwen/triqs:gcc
+FROM fulvwen/triqs:gcc-mpich
 
 USER root
 
